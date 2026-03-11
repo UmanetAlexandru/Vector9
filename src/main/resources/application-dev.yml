@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/vector9_dev
+
+  flyway:
+    clean-disabled: false
+
+logging:
+  level:
+    md.hashcode.vector9: DEBUG
+    org.jooq.tools.LoggerListener: DEBUG
+
+vector9:
+  graphql:
+    timeout-ms: 60000
+
+  crawler:
+    request-delay-ms: 2000

@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 20
+
+  flyway:
+    clean-disabled: true
+
+logging:
+  level:
+    root: INFO
+    md.hashcode.vector9: INFO
+    org.jooq: WARN
+  file:
+    name: ${VECTOR9_LOG_FILE:/var/log/vector9/application.log}
+
+vector9:
+  crawler:
+    enabled: true
+
+  enrichment:
+    enabled: true
