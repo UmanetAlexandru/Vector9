@@ -7,6 +7,11 @@ spring:
     enabled: true
     clean-disabled: false
 
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:db/test-init.sql
+
 logging:
   level:
     root: WARN

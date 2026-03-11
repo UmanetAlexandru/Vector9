@@ -4,15 +4,17 @@
 
 For each implementation task, follow this sequence unless the user explicitly asks for a different flow:
 
-1. Create a new git branch before making task-specific changes.
-2. Use a branch name that reflects the task, for example `task/01-project-setup` or `fix/http-client-timeout`.
-3. Implement the task on that branch.
-4. Run the relevant validation commands after implementation.
-5. Confirm in the final response which tests or checks were run and whether they passed.
-6. Commit only after the relevant tests/checks have run.
-7. Use a detailed commit message that clearly describes the user-facing and technical changes.
-8. Push the branch to `origin`.
-9. Create a pull request using the GitHub CLI (`gh pr create`).
+1. Read the task fully before starting implementation.
+2. Before creating a branch or making code changes, tell the user whether there are any questions, missing information, assumptions, or potential problems that should be discussed first.
+3. If the task is clear enough to proceed, create a new git branch before making task-specific changes.
+4. Use a branch name that reflects the task, for example `task/01-project-setup` or `fix/http-client-timeout`.
+5. Implement the task on that branch.
+6. Run the relevant validation commands after implementation.
+7. Confirm in the final response which tests or checks were run and whether they passed.
+8. Commit only after the relevant tests/checks have run.
+9. Use a detailed commit message that clearly describes the user-facing and technical changes.
+10. Push the branch to `origin`.
+11. Create a pull request using the GitHub CLI (`gh pr create`).
 
 ## Git and GitHub Rules
 
