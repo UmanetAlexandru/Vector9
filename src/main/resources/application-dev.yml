@@ -1,6 +1,12 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/vector9_dev
+    username: vector9
+    password: vector9_dev_password
+    hikari:
+      maximum-pool-size: 5
+      connection-test-query: SELECT 1
+      leak-detection-threshold: 60000
 
   flyway:
     clean-disabled: false
@@ -9,6 +15,8 @@ logging:
   level:
     md.hashcode.vector9: DEBUG
     org.jooq.tools.LoggerListener: DEBUG
+    org.springframework.jdbc: DEBUG
+    com.zaxxer.hikari: DEBUG
 
 vector9:
   graphql:

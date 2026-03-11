@@ -31,4 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Local environment ###
+.env
+.env.local
 logs/
+postgres_data/
+pgadmin_data/
