@@ -74,7 +74,7 @@ class SchemaMigrationIntegrationTest {
                 """
                 SELECT count(*)
                 FROM subcategories
-                WHERE id = 6678
+                WHERE id = 7661
                   AND enabled = true
                 """,
                 Integer.class
@@ -167,7 +167,7 @@ class SchemaMigrationIntegrationTest {
                 """,
                 1001L,
                 "Schema test ad",
-                6678L,
+                7661L,
                 "owner-for-image-test"
         );
 

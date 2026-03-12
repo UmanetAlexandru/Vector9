@@ -29,7 +29,7 @@ Create the production database schema for Vector9 using Flyway migrations. This 
 - Do not add `owner_login` to `ads` in this task
 - Keep transaction-boundary decisions for owner/ad writes out of the schema; those belong to service-layer design later
 - Seed only one initial subcategory for controlled rollout
-- Recommended initial seed: `6678` villas
+- Recommended initial seed: `7661` Mini PC
 - Do not enable jOOQ code generation in this task; Task 04 should do that after the schema is in place
 
 ---
@@ -278,10 +278,10 @@ INSERT INTO subcategories (
     enabled,
     include_cars_features
 ) VALUES (
-    6678,
-    'Villas',
-    270,
-    'Real Estate',
+    7661,
+    'Mini PC',
+    2,
+    'Computers and Office Equipment',
     true,
     false
 );

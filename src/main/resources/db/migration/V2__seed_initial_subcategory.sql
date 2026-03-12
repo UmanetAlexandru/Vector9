@@ -6,10 +6,10 @@ INSERT INTO subcategories (
     enabled,
     include_cars_features
 ) VALUES (
-    6678,
-    'Villas',
-    270,
-    'Real Estate',
+    7661,
+    'Mini PC',
+    2,
+    'Computers and Office Equipment',
     true,
     false
 );
