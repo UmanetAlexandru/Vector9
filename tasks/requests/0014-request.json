@@ -1,0 +1,38 @@
+{
+  "id": "0014",
+  "observedAt": "2026-03-13T19:21:49.919Z",
+  "request": {
+    "url": "https://999.md/graphql",
+    "method": "POST",
+    "resourceType": "fetch",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "lang": "ro",
+      "referer": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "sec-ch-ua-mobile": "?0",
+      "baggage": "sentry-environment=production,sentry-release=735281efd07e89bd438ba3b02e95d5d50c30bdae,sentry-public_key=8c0da8a1581f038752d958d2e9ae8210,sentry-trace_id=4d6c9c98d3b2cbb7f7315ed3519e62ea,sentry-sampled=false,sentry-sample_rand=0.848749101120017,sentry-sample_rate=0.05",
+      "sentry-trace": "4d6c9c98d3b2cbb7f7315ed3519e62ea-bbe867fdac8648e7-0",
+      "source": "desktop",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "accept": "*/*",
+      "content-type": "application/json"
+    },
+    "postData": "{\"operationName\":\"RegisterBoosterImpressions\",\"variables\":{\"input\":{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJIjp7ImEiOlt7ImEiOiIxMDM1NjgxMjIiLCJ0IjoxLCJjIjoyLCJzIjo3NjYxLCJ5IjoiZDUyNzY0YmQtZjcwNy00YjJkLWJkYWEtNGZjMTk5MGM3NTE0In0seyJhIjoiNzc4Njc4MzciLCJ0IjoxLCJjIjoyLCJzIjoxMzk5LCJ5IjoiN2RmMDEzMTktMWVmNC00OGVjLWFkOTMtMjljOTBlZmIxYjQwIn0seyJhIjoiMTAzNTgwMDc3IiwidCI6MSwiYyI6MiwicyI6NCwieSI6ImE4Mzg1YmY3LTM4ZjYtNDZkOS05OTJlLWZhNThmNTIzNzgwNyJ9XSwiaSI6Ijg5LjE0OS4xMjAuNTMiLCJ0IjoiMjAyNi0wMy0xM1QxOToyMTo0OS4xNDg4MTAwNzlaIiwicyI6ImRlc2t0b3AiLCJwIjoiYWRzX2xpc3RfaGVhZGVyIiwiZSI6Ijg5LjE0OS4xMjAuNTMifSwiZXhwIjoxNzczNDMwMzA5fQ.o45uk6Xcz-t81yX09cWpxPRHXeA8gFJjD74SVLqBAoU\"}},\"query\":\"mutation RegisterBoosterImpressions($input: Booster_RegisterTokenRequestInput!) {\\n  registerBoosterImpressions(input: $input)\\n}\"}",
+    "timing": {
+      "startTime": 1773429709773.942,
+      "domainLookupStart": -1,
+      "domainLookupEnd": -1,
+      "connectStart": -1,
+      "secureConnectionStart": -1,
+      "connectEnd": -1,
+      "requestStart": 0.755,
+      "responseStart": 40.67,
+      "responseEnd": 41.224
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "isNavigationRequest": false
+  }
+}

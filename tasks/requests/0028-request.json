@@ -1,0 +1,33 @@
+{
+  "id": "0028",
+  "observedAt": "2026-03-13T19:21:51.735Z",
+  "request": {
+    "url": "https://b.clarity.ms/collect",
+    "method": "POST",
+    "resourceType": "xhr",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "accept": "application/x-clarity-gzip",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": "\u001f�\b\u0000\u0000\u0000\u0000\u0000\u0000\n�RMo�0\f�+�δ\"َ��\bv�a��\u0018F��l�F_��.��>�u�\u0002;\u000e\u0004\u001eH��\u0012��!;�L�\u001d�v\f*�r\u000bR�\u000eX��ܪ\u0006�\u0001�s���X�FR\u0014��\u0004�b�!�\u000e��~��v�D�1��F{\u001b��1�ʍ���'�%��(Xtyc�Q\u0019�'��I\u001e��e\u00030�\u000e}��Ѐ\u0004Y�\u0004��z��J��I�����o\u0018��r�\u0001\r�lL�T�c��%��e�\u0012e,��\u00142�\u0014���\u001eљ����\u001a�������~�\u000e3\u0003\u0016膆��Lڻ\u0010�#꼒��\u0017>��lP\u001b�׵BsmT�<s��0�Ns�}��-2`c�l�Ps��2hq$�J�TN�\u0007t�U,�s�����Y�\t�\u0013ƕng>c\n��g��\u001f\u001b\u000fo�\"��z��;�A@\u0003\rlAB��\u0016�\u001dtu�F�[h��U\u000bb\u0018\u0006`�e�Ւ�ڦZ@\u0000����r)�R:���?�2{o2��=\u000e���\\*C\u0017�c��l0�V��������+�7x\u001cI\u0019Yִ���\u0012�C���_�\u0015�V�m��\u0015V�\u000b�\u0017�C!>d�\u000fk�\u0007�)χB�1�ں�-t5�����S���c�0��\u0003�>�W\u0003\u0000\u0000",
+    "timing": {
+      "startTime": 1773429711597.327,
+      "domainLookupStart": -1,
+      "domainLookupEnd": -1,
+      "connectStart": -1,
+      "secureConnectionStart": -1,
+      "connectEnd": -1,
+      "requestStart": 0.891,
+      "responseStart": 136.157,
+      "responseEnd": 137.041
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "isNavigationRequest": false
+  }
+}

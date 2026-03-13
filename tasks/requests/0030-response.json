@@ -1,0 +1,26 @@
+{
+  "id": "0030",
+  "observedAt": "2026-03-13T19:21:51.814Z",
+  "response": {
+    "url": "https://prompts.maze.co/api/widgets",
+    "status": 200,
+    "statusText": "",
+    "headers": {
+      "access-control-allow-origin": "*",
+      "content-length": "2",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Fri, 13 Mar 2026 19:21:51 GMT",
+      "etag": "W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\"",
+      "x-powered-by": "Express"
+    },
+    "fromServiceWorker": false,
+    "ok": true
+  },
+  "failure": null,
+  "capture": {
+    "bodyStored": true,
+    "bodyEncoding": "utf-8",
+    "bodySkippedReason": null,
+    "contentType": "application/json; charset=utf-8"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "0038",
+  "observedAt": "2026-03-13T19:22:13.277Z",
+  "request": {
+    "url": "https://b.clarity.ms/collect",
+    "method": "POST",
+    "resourceType": "xhr",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "accept": "application/x-clarity-gzip",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": "\u001f�\b\u0000\u0000\u0000\u0000\u0000\u0000\n��ݎ�0\u0010�_\u0005�����ǿ�*�Mo�\u0002�A�b��Z!@��nZ��+��M ��g[!���c�}��\u0018���%wR\u0013P�\u001a�\u0000)\u0005\u0003���A��\f[\u0002\u0004\u000f��a�W\u0002�@[\u0002\b���G��1[��4��ի�[5vt����{g�1.�:�6\u001b[��|��~gZ�����}�����\u0013��V�\u0000R�,ϧU\b@@�PH9gS�\u0019��\u0002U\n\u0014�}������1�\u0014P` 5\u0007\u000e�\u0000�+\t*\u0000\\��\u001c���/\"��\u0019cH�\u0016E\u0001����\u0001\u0005(Y\u0002�B�J\u0003y��#\u0001R���m[�絷�j�q\\��������\u0010 �|��\u0018\t�r�e�h�ڴk7�=0�Cc���5�5Y�v����l�\u001e��\t�?�\u0013��\u0006�\u0004rY\\i#�\\C\u0002) -\u0000%�\u0001N\u00170��x�9]��֮��.+g���T�a0�#�'��67e3\u001a\u0002�I�\u00055\\��\u0017��|�ۛ��0�-�I\u00029�\u001b=����ޥ�\u001b�j\u001bN�d���{\u001fu}YYw�\"���P��\u001bv�T6�3�~\u0013�HX�\f\u0011=�ޞP�l�fQ�d\u001e�����\b����\u001f�\u0012\b(\u0012�+o?(�8\u001c%X�z�\u0000�u���7\u0000\u0018^�Eh�c[\u0003K.\u001cQ޻\u0013 <�\u0015\\Y��\n�������4=�\u0012\u0010iQ@>�I�t����9�\\�\u0000\u001f�c�}����/\u0003|�^�_��י|�b_�\"�|\u0001�W\u000f�\fjb��7�*\f��a��\u000b0c��q�g!�\u0005x��y�g��\u0007X���\u001d�$\u0000�v��\u0000$�\u0018���\u000f�\nGjO\b\u0000\u0000",
+    "timing": {
+      "startTime": 1773429733131.865,
+      "domainLookupStart": -1,
+      "domainLookupEnd": -1,
+      "connectStart": -1,
+      "secureConnectionStart": -1,
+      "connectEnd": -1,
+      "requestStart": 3.069,
+      "responseStart": 144.646,
+      "responseEnd": 145.474
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "isNavigationRequest": false
+  }
+}

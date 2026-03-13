@@ -1,0 +1,32 @@
+{
+  "id": "0025",
+  "observedAt": "2026-03-13T19:21:50.972Z",
+  "request": {
+    "url": "https://ut.pubmatic.com/geo?pubid=162270",
+    "method": "GET",
+    "resourceType": "xhr",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://ads.pubmatic.com/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null,
+    "timing": {
+      "startTime": 1773429710462.871,
+      "domainLookupStart": -1,
+      "domainLookupEnd": -1,
+      "connectStart": -1,
+      "secureConnectionStart": -1,
+      "connectEnd": -1,
+      "requestStart": 0.07,
+      "responseStart": 505.376,
+      "responseEnd": 506.667
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://ads.pubmatic.com/AdServer/js/user_sync.html?p=162270&gdpr=0&gdpr_consent=&predirect=https%3A%2F%2Fittpx.eskimi.com%2Fsync%3Fdp_id%3D140%26user_id%3D",
+    "isNavigationRequest": false
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "0003",
+  "observedAt": "2026-03-13T19:21:49.407Z",
+  "response": {
+    "url": "https://v2.simpalsid.com/graphql",
+    "status": 200,
+    "statusText": "",
+    "headers": {
+      "access-control-allow-headers": "auth,content-type,accesstoken",
+      "access-control-allow-origin": "https://999.md",
+      "content-length": "389",
+      "content-type": "application/graphql-response+json",
+      "date": "Fri, 13 Mar 2026 19:21:49 GMT",
+      "server": "nginx",
+      "strict-transport-security": "max-age=31536000",
+      "x-xss-protection": "1; mode=block"
+    },
+    "fromServiceWorker": false,
+    "ok": true
+  },
+  "failure": null,
+  "capture": {
+    "bodyStored": true,
+    "bodyEncoding": "utf-8",
+    "bodySkippedReason": null,
+    "contentType": "application/graphql-response+json"
+  }
+}

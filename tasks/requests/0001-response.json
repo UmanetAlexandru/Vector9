@@ -1,0 +1,29 @@
+{
+  "id": "0001",
+  "observedAt": "2026-03-13T19:21:49.133Z",
+  "response": {
+    "url": "https://newsentry.simpals.md/api/13/envelope/?sentry_version=7&sentry_key=8c0da8a1581f038752d958d2e9ae8210&sentry_client=sentry.javascript.nextjs%2F10.23.0",
+    "status": 200,
+    "statusText": "",
+    "headers": {
+      "access-control-allow-origin": "*",
+      "access-control-expose-headers": "x-sentry-error,x-sentry-rate-limits,retry-after",
+      "content-length": "2",
+      "content-type": "application/json",
+      "cross-origin-resource-policy": "cross-origin",
+      "date": "Fri, 13 Mar 2026 19:21:48 GMT",
+      "server": "nginx",
+      "strict-transport-security": "max-age=31536000",
+      "vary": "origin, access-control-request-method, access-control-request-headers"
+    },
+    "fromServiceWorker": false,
+    "ok": true
+  },
+  "failure": null,
+  "capture": {
+    "bodyStored": true,
+    "bodyEncoding": "utf-8",
+    "bodySkippedReason": null,
+    "contentType": "application/json"
+  }
+}

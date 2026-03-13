@@ -1,0 +1,29 @@
+{
+  "id": "0021",
+  "observedAt": "2026-03-13T19:21:50.654Z",
+  "response": {
+    "url": "https://dsp-ap.eskimi.com/v2/gtr?&t=1773429710275",
+    "status": 200,
+    "statusText": "OK",
+    "headers": {
+      "access-control-allow-credentials": "true",
+      "access-control-allow-origin": "https://999.md",
+      "cache-control": "no-cache",
+      "connection": "keep-alive",
+      "content-type": "application/json",
+      "date": "Fri, 13 Mar 2026 19:21:50 GMT",
+      "server": "nginx",
+      "set-cookie": "_sclb_srv_id_2925_305330f9d2eb57186ec58094e5bff759=3d187bc0497e5c11011475057e444cee; expires=Fri, 13-Mar-26 20:21:50 GMT; max-age=3600; domain=.dsp-ap.eskimi.com; path=/\n__eConsent=1; Expires=Sun, 12 Apr 2026 19:21:50 GMT; Max-Age=2592000; Domain=.eskimi.com; Path=/; Secure; SameSite=None\n__eDId=cc1dd4d1-ce99-4604-9e04-92d9b9b99b21; Expires=Sun, 12 Apr 2026 19:21:50 GMT; Max-Age=2592000; Domain=.eskimi.com; Path=/; Secure; SameSite=None\n__eP=1; Expires=Fri, 27 Mar 2026 19:21:50 GMT; Max-Age=1209600; Domain=.eskimi.com; Path=/; Secure; SameSite=None",
+      "transfer-encoding": "chunked"
+    },
+    "fromServiceWorker": false,
+    "ok": true
+  },
+  "failure": null,
+  "capture": {
+    "bodyStored": true,
+    "bodyEncoding": "utf-8",
+    "bodySkippedReason": null,
+    "contentType": "application/json"
+  }
+}

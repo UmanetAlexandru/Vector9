@@ -1,0 +1,27 @@
+{
+  "id": "0026",
+  "observedAt": "2026-03-13T19:21:51.298Z",
+  "response": {
+    "url": "https://my.yespo.io/site-events/api/v1/webevent",
+    "status": 200,
+    "statusText": "",
+    "headers": {
+      "access-control-allow-headers": "Origin, X-Requested-With, Access-Control-Allow-Headers, Content-Type, Accept, cl-customer-id, *",
+      "access-control-allow-methods": "GET, POST, OPTIONS, PUT, DELETE",
+      "access-control-allow-origin": "*",
+      "content-length": "0",
+      "date": "Fri, 13 Mar 2026 19:21:51 GMT",
+      "server": "nginx",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+    },
+    "fromServiceWorker": false,
+    "ok": true
+  },
+  "failure": null,
+  "capture": {
+    "bodyStored": false,
+    "bodyEncoding": null,
+    "bodySkippedReason": null,
+    "contentType": ""
+  }
+}

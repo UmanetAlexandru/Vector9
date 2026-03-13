@@ -1,0 +1,33 @@
+{
+  "id": "0026",
+  "observedAt": "2026-03-13T19:21:51.298Z",
+  "request": {
+    "url": "https://my.yespo.io/site-events/api/v1/webevent",
+    "method": "POST",
+    "resourceType": "fetch",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "content-type": "application/json",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": "{\"PageView\":{},\"GeneralInfo\":{\"eventName\":\"PageView\",\"siteId\":\"C0669D0\",\"datetime\":1773429710187,\"s_location\":\"https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776\",\"referrer\":\"\",\"cookies\":{\"sc\":\"C7F93564-9435-12C4-C498-49792075DEB2\",\"abTest\":\"\"}},\"webId\":\"C7F93564-9435-12C4-C498-49792075DEB2\",\"orgId\":108599}",
+    "timing": {
+      "startTime": 1773429711233.14,
+      "domainLookupStart": -1,
+      "domainLookupEnd": -1,
+      "connectStart": -1,
+      "secureConnectionStart": -1,
+      "connectEnd": -1,
+      "requestStart": 0.463,
+      "responseStart": 65.904,
+      "responseEnd": 146.959
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "isNavigationRequest": false
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "0033",
+  "observedAt": "2026-03-13T19:21:56.613Z",
+  "response": {
+    "url": "https://b.clarity.ms/collect",
+    "status": 204,
+    "statusText": "No Content",
+    "headers": {
+      "access-control-allow-credentials": "true",
+      "access-control-allow-origin": "https://999.md",
+      "connection": "keep-alive",
+      "date": "Fri, 13 Mar 2026 19:21:56 GMT",
+      "request-context": "appId=cid-v1:a449a586-8786-487f-a449-dc1b282a2628",
+      "server": "nginx",
+      "vary": "Origin"
+    },
+    "fromServiceWorker": false,
+    "ok": true
+  },
+  "failure": null,
+  "capture": {
+    "bodyStored": false,
+    "bodyEncoding": null,
+    "bodySkippedReason": null,
+    "contentType": ""
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "0004",
+  "observedAt": "2026-03-13T19:21:49.409Z",
+  "request": {
+    "url": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "method": "POST",
+    "resourceType": "fetch",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "next-action": "6065d4b8ec61e89b237d724b8c1c3dbd47addb9abd",
+      "referer": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "sec-ch-ua-mobile": "?0",
+      "next-router-state-tree": "%5B%22%22%2C%7B%22children%22%3A%5B%5B%22locale%22%2C%22ro%22%2C%22d%22%5D%2C%7B%22children%22%3A%5B%22(routes)%22%2C%7B%22children%22%3A%5B%22list%22%2C%7B%22children%22%3A%5B%5B%22category%22%2C%22computers-and-office-equipment%22%2C%22d%22%5D%2C%7B%22children%22%3A%5B%5B%22subcategory%22%2C%22mini-pc%22%2C%22d%22%5D%2C%7B%22children%22%3A%5B%22__PAGE__%22%2C%7B%7D%2Cnull%2Cnull%5D%7D%2Cnull%2Cnull%5D%7D%2Cnull%2Cnull%5D%7D%2Cnull%2Cnull%5D%7D%2Cnull%2Cnull%5D%7D%2Cnull%2Cnull%5D%7D%2Cnull%2Cnull%2Ctrue%5D",
+      "baggage": "sentry-environment=production,sentry-release=735281efd07e89bd438ba3b02e95d5d50c30bdae,sentry-public_key=8c0da8a1581f038752d958d2e9ae8210,sentry-trace_id=4d6c9c98d3b2cbb7f7315ed3519e62ea,sentry-sampled=false,sentry-sample_rand=0.848749101120017,sentry-sample_rate=0.05",
+      "sentry-trace": "4d6c9c98d3b2cbb7f7315ed3519e62ea-ad3b53b04da16d64-0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "accept": "text/x-component",
+      "content-type": "text/plain;charset=UTF-8"
+    },
+    "postData": "[]",
+    "timing": {
+      "startTime": 1773429709263.895,
+      "domainLookupStart": -1,
+      "domainLookupEnd": -1,
+      "connectStart": -1,
+      "secureConnectionStart": -1,
+      "connectEnd": -1,
+      "requestStart": 1.396,
+      "responseStart": 22.149,
+      "responseEnd": 22.803
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "isNavigationRequest": false
+  }
+}

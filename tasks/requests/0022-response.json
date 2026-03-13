@@ -1,0 +1,24 @@
+{
+  "id": "0022",
+  "observedAt": "2026-03-13T19:21:50.701Z",
+  "response": {
+    "url": "https://site-script.esputnik.com/site-script/v1/event",
+    "status": 200,
+    "statusText": "",
+    "headers": {
+      "access-control-allow-origin": "*",
+      "content-length": "51",
+      "content-type": "application/json",
+      "date": "Fri, 13 Mar 2026 19:21:50 GMT"
+    },
+    "fromServiceWorker": false,
+    "ok": true
+  },
+  "failure": null,
+  "capture": {
+    "bodyStored": true,
+    "bodyEncoding": "utf-8",
+    "bodySkippedReason": null,
+    "contentType": "application/json"
+  }
+}
