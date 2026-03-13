@@ -22,6 +22,11 @@
         <jooq.version>3.20.11</jooq.version>
         <testcontainers.version>1.21.4</testcontainers.version>
         <okhttp.version>4.12.0</okhttp.version>
+        <jooq.codegen.db.host>127.0.0.1</jooq.codegen.db.host>
+        <jooq.codegen.db.port>5432</jooq.codegen.db.port>
+        <jooq.codegen.db.name>vector9_dev</jooq.codegen.db.name>
+        <jooq.codegen.db.user>vector9</jooq.codegen.db.user>
+        <jooq.codegen.db.password>vector9_dev_password</jooq.codegen.db.password>
     </properties>
 
     <dependencies>
@@ -124,6 +129,109 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.6.1</version>
+                <executions>
+                    <execution>
+                        <id>add-jooq-generated-sources</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>src/main/generated/jooq</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>jooq-codegen</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.flywaydb</groupId>
+                        <artifactId>flyway-maven-plugin</artifactId>
+                        <configuration>
+                            <url>jdbc:postgresql://${jooq.codegen.db.host}:${jooq.codegen.db.port}/${jooq.codegen.db.name}</url>
+                            <user>${jooq.codegen.db.user}</user>
+                            <password>${jooq.codegen.db.password}</password>
+                            <locations>
+                                <location>filesystem:src/main/resources/db/migration</location>
+                            </locations>
+                        </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.postgresql</groupId>
+                                <artifactId>postgresql</artifactId>
+                                <version>42.7.8</version>
+                            </dependency>
+                        </dependencies>
+                        <executions>
+                            <execution>
+                                <id>migrate-schema-for-jooq</id>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>migrate</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.jooq</groupId>
+                        <artifactId>jooq-codegen-maven</artifactId>
+                        <version>${jooq.version}</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.postgresql</groupId>
+                                <artifactId>postgresql</artifactId>
+                                <version>42.7.8</version>
+                            </dependency>
+                        </dependencies>
+                        <executions>
+                            <execution>
+                                <id>generate-jooq-schema</id>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>generate</goal>
+                                </goals>
+                                <configuration>
+                                    <jdbc>
+                                        <driver>org.postgresql.Driver</driver>
+                                        <url>jdbc:postgresql://${jooq.codegen.db.host}:${jooq.codegen.db.port}/${jooq.codegen.db.name}</url>
+                                        <user>${jooq.codegen.db.user}</user>
+                                        <password>${jooq.codegen.db.password}</password>
+                                    </jdbc>
+                                    <generator>
+                                        <database>
+                                            <name>org.jooq.meta.postgres.PostgresDatabase</name>
+                                            <inputSchema>public</inputSchema>
+                                            <includes>subcategories|owners|ads|ad_images|price_history|crawl_checkpoints|car_features|ad_attributes|view_history</includes>
+                                            <excludes>flyway_schema_history</excludes>
+                                        </database>
+                                        <generate>
+                                            <records>true</records>
+                                            <pojos>false</pojos>
+                                            <javaTimeTypes>true</javaTimeTypes>
+                                        </generate>
+                                        <target>
+                                            <packageName>md.hashcode.vector9.jooq</packageName>
+                                            <directory>src/main/generated/jooq</directory>
+                                        </target>
+                                    </generator>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
