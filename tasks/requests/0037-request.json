@@ -1,0 +1,33 @@
+{
+  "id": "0037",
+  "observedAt": "2026-03-13T19:22:07.731Z",
+  "request": {
+    "url": "https://b.clarity.ms/collect",
+    "method": "POST",
+    "resourceType": "xhr",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "accept": "application/x-clarity-gzip",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": "\u001f�\b\u0000\u0000\u0000\u0000\u0000\u0000\n��ݎ�0\u0010�_\u0005�U+\r\u001b��\u000ff\u0015��7}�� �򂣵B���ݴ�W&\t��J�he�\u001a8�g\u000e\u0007�'8(J`\u000f��Ԁ\u0012���(�0\b�?\u001f�\u0015n�\u0002\u0002\u001d�\u000f�Y�\u0004��u��l^�\u0012�0\u0015��1�a׬�~��)��~7�\u001b��vM�o6�v������ua��O��S�D��Z+�\u0010,\u0014eyt!��x��d\u0019?V�3</�� �n߶��UX�&.�!G�+̐��\u00129r�r\u00012�\nKʈ�\u0007\u0012�\f���\u0010���,($�s$\u00122V\u001a�󗯀��`S�5�m\u001d��[;M���6�Z߸�X�:���z?��\u000b�\u0010���lJ�`Go�\u0017�4�[ol;9@�¡u�~\u001fZ߹\"���=&��\t/E\u001e�\u001e!�1��\u001cKY]����\u0002,s4H�B�\u0019[z��^\u001c�$�\u0017�8�YvG�?M�ê�\r�>�>u�KGq�Q\u0003��`�\u0019�\r�\u0005�wx~�GR�SF���h���)`IyL8�\u0007[�p(\u0012zL�h�iӏ��X�6����r����\t;m\u001fO�\u000f��$}u�[\u001f��xBL��\u0014�\u0012�$r\u0019+��D��=b%��RT)��z��<���z�լ�x��\u0012�\u0002�\bd�\u00160\u000b\u0010�C�]\u0003�F��Z��T�r�\u0017I�g~�1�5u-�:t�t#P�����o�\\g\f\u0015\u0005\u0000\u0000",
+    "timing": {
+      "startTime": 1773429727590.375,
+      "domainLookupStart": -1,
+      "domainLookupEnd": -1,
+      "connectStart": -1,
+      "secureConnectionStart": -1,
+      "connectEnd": -1,
+      "requestStart": 2.085,
+      "responseStart": 141.254,
+      "responseEnd": 142.174
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "isNavigationRequest": false
+  }
+}

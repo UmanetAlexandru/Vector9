@@ -1,0 +1,38 @@
+{
+  "id": "0002",
+  "observedAt": "2026-03-13T19:21:49.403Z",
+  "response": {
+    "url": "https://cdn.growthbook.io/api/features/sdk-dNbrVbIrMlQq7xs",
+    "status": 200,
+    "statusText": "",
+    "headers": {
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "access-control-expose-headers": "x-sse-support",
+      "age": "243",
+      "cache-control": "public, max-age=300, stale-while-revalidate=3600, stale-if-error=36000",
+      "content-encoding": "gzip",
+      "content-length": "29203",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Fri, 13 Mar 2026 19:21:49 GMT",
+      "etag": "W/\"2a115-OLxY4oaeq9dxBa7PH53+IAlkEjg\"",
+      "vary": "Accept-Encoding",
+      "via": "1.1 varnish, 1.1 varnish",
+      "x-cache": "HIT, HIT",
+      "x-cache-hits": "10953, 21",
+      "x-powered-by": "Express",
+      "x-served-by": "cache-iad-kcgs7200165-IAD, cache-sof1510028-SOF",
+      "x-sse-support": "enabled",
+      "x-timer": "S1773429709.086173,VS0,VE0"
+    },
+    "fromServiceWorker": false,
+    "ok": true
+  },
+  "failure": null,
+  "capture": {
+    "bodyStored": true,
+    "bodyEncoding": "utf-8",
+    "bodySkippedReason": null,
+    "contentType": "application/json; charset=utf-8"
+  }
+}

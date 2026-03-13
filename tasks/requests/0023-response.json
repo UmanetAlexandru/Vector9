@@ -1,0 +1,30 @@
+{
+  "id": "0023",
+  "observedAt": "2026-03-13T19:21:50.953Z",
+  "response": {
+    "url": "https://token.rubiconproject.com/khaos.json?",
+    "status": 200,
+    "statusText": "OK",
+    "headers": {
+      "cache-control": "no-cache,no-store,must-revalidate",
+      "expires": "0",
+      "p3p": "CP=\"NOI CURa ADMa DEVa TAIa OUR BUS IND UNI COM NAV INT\"",
+      "pragma": "no-cache",
+      "x-rphost": "a5fb025b5bd3920aaa3fc8614ba9393e",
+      "access-control-allow-credentials": "true",
+      "access-control-allow-origin": "https://eus.rubiconproject.com",
+      "content-length": "7",
+      "content-type": "application/json; charset=UTF-8",
+      "set-cookie": "audit_p=1|YM112sMASz9myXtAlBobIawDXVbgXmQZiFGSaq4cbZjQrQLTOsR9+WfGImTbycoeDythtN/jJR7qFTrNE4+z9qDrxqInxg513OlDu/ORdD8=; Max-Age=31536000; Expires=Sat, 13 Mar 2027 19:21:50 GMT; Path=/; Domain=.rubiconproject.com; Secure; SameSite=None; Partitioned;\nkhaos=MMPA9EIA-1D-I75D; Max-Age=31536000; Expires=Sat, 13 Mar 2027 19:21:50 GMT; Path=/; Domain=.rubiconproject.com; Secure; SameSite=None\nkhaos_p=MMPA9EIA-1D-I75D; Max-Age=31536000; Expires=Sat, 13 Mar 2027 19:21:50 GMT; Path=/; Domain=.rubiconproject.com; Secure; SameSite=None; Partitioned;\naudit=1|YM112sMASz9myXtAlBobIawDXVbgXmQZiFGSaq4cbZjQrQLTOsR9+WfGImTbycoeDythtN/jJR7qFTrNE4+z9qDrxqInxg513OlDu/ORdD8=; Max-Age=31536000; Expires=Sat, 13 Mar 2027 19:21:50 GMT; Path=/; Domain=.rubiconproject.com; Secure; SameSite=None"
+    },
+    "fromServiceWorker": false,
+    "ok": true
+  },
+  "failure": null,
+  "capture": {
+    "bodyStored": true,
+    "bodyEncoding": "utf-8",
+    "bodySkippedReason": null,
+    "contentType": "application/json; charset=utf-8"
+  }
+}

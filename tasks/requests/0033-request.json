@@ -1,0 +1,33 @@
+{
+  "id": "0033",
+  "observedAt": "2026-03-13T19:21:56.613Z",
+  "request": {
+    "url": "https://b.clarity.ms/collect",
+    "method": "POST",
+    "resourceType": "xhr",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "accept": "application/x-clarity-gzip",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": "\u001f�\b\u0000\u0000\u0000\u0000\u0000\u0000\n��Ɋ�@\u0010�_E�)���՛���K^ \u0017!�\u001e��4�\u0016��\u0019OȻ��e�\u001e\u0007r\b�A����o�\u0007X�\u000b`�t�\u0012@�D��LS����I\u001bi�\u0003 �)y���H�\u001bY\u0007H��\u0003��\u000fS��fY�i���o\u001b7�mշ���q�MW��~�*\u001b�oG7�����u.\u001e�O�#�G�%��\u0012�@^\u0014�&��x�0\u0013����3�\u001c�\u001a\u0019vǦ��G��fđPb\u0001�ط��6�y�����\"3䨈�Iss\n9r���\u000b�\u001a\u000b�XhL1�!+�\u0012a\b#͟5��)\u0012I\u0015�\u0004�󗯀P\u001bob���u\u0017\u001c�\u001a3M��q�!�\u001aW[@���\f�\u0004\bft&~vum��\u001f�\u0001�������\u001b��<���>D/���y�e2�>@����S,TyS�\u0000�\u0004S̐X��\u0004[��\u000e��a������OSE��T�}��T�q��\u0007,��v̽i&\u000bX,��Z��ɿV\u000b�1�wN&�d�.�\u0002,D\u0018�\u00072Q�{�e�h��z\u0013�����}�\u000f�r��G�\u0010��tӾ\u001f��\u001c6�[Q�I�|xň-��\u000b��<�_����x�=\"�X;��Ւ�d�B\u0014�G�W��%_�`\u0017����*\u0007\u0003�ӭ,WY�r�<�rD\u0007�\u0016@\u0006@h��LK�\u0002*\u0000R�\u0002�F,��\u0014e\u0016�n^!���eY���pݍİ�e��\u0017B3��(\u0005\u0000\u0000",
+    "timing": {
+      "startTime": 1773429716477.612,
+      "domainLookupStart": -1,
+      "domainLookupEnd": -1,
+      "connectStart": -1,
+      "secureConnectionStart": -1,
+      "connectEnd": -1,
+      "requestStart": 2.013,
+      "responseStart": 135.293,
+      "responseEnd": 136.005
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "isNavigationRequest": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "0023",
+  "observedAt": "2026-03-13T19:21:50.953Z",
+  "request": {
+    "url": "https://token.rubiconproject.com/khaos.json?",
+    "method": "GET",
+    "resourceType": "xhr",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://eus.rubiconproject.com/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null,
+    "timing": {
+      "startTime": 1773429710514.069,
+      "domainLookupStart": 0.602,
+      "domainLookupEnd": 185.932,
+      "connectStart": 186.22,
+      "secureConnectionStart": 231.941,
+      "connectEnd": 346.675,
+      "requestStart": 347.295,
+      "responseStart": 432.195,
+      "responseEnd": 434.818
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://eus.rubiconproject.com/usync.html?p=eskimi&endpoint=eu",
+    "isNavigationRequest": false
+  }
+}

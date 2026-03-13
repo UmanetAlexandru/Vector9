@@ -1,0 +1,32 @@
+{
+  "id": "0021",
+  "observedAt": "2026-03-13T19:21:50.654Z",
+  "request": {
+    "url": "https://dsp-ap.eskimi.com/v2/gtr?&t=1773429710275",
+    "method": "GET",
+    "resourceType": "xhr",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null,
+    "timing": {
+      "startTime": 1773429710277.2573,
+      "domainLookupStart": 0.556,
+      "domainLookupEnd": 184.179,
+      "connectStart": 184.588,
+      "secureConnectionStart": 230.201,
+      "connectEnd": 277.833,
+      "requestStart": 277.976,
+      "responseStart": 375.29,
+      "responseEnd": 377.097
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "isNavigationRequest": false
+  }
+}

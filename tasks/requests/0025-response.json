@@ -1,0 +1,25 @@
+{
+  "id": "0025",
+  "observedAt": "2026-03-13T19:21:50.972Z",
+  "response": {
+    "url": "https://ut.pubmatic.com/geo?pubid=162270",
+    "status": 200,
+    "statusText": "",
+    "headers": {
+      "access-control-allow-origin": "*",
+      "cache-control": "max-age=172800",
+      "content-length": "22",
+      "date": "Fri, 13 Mar 2026 19:21:50 GMT",
+      "content-type": "application/json"
+    },
+    "fromServiceWorker": false,
+    "ok": true
+  },
+  "failure": null,
+  "capture": {
+    "bodyStored": true,
+    "bodyEncoding": "utf-8",
+    "bodySkippedReason": null,
+    "contentType": "application/json"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "0013",
+  "observedAt": "2026-03-13T19:21:49.916Z",
+  "request": {
+    "url": "https://999.md/graphql",
+    "method": "POST",
+    "resourceType": "fetch",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "lang": "ro",
+      "referer": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "sec-ch-ua-mobile": "?0",
+      "baggage": "sentry-environment=production,sentry-release=735281efd07e89bd438ba3b02e95d5d50c30bdae,sentry-public_key=8c0da8a1581f038752d958d2e9ae8210,sentry-trace_id=4d6c9c98d3b2cbb7f7315ed3519e62ea,sentry-sampled=false,sentry-sample_rand=0.848749101120017,sentry-sample_rate=0.05",
+      "sentry-trace": "4d6c9c98d3b2cbb7f7315ed3519e62ea-9dbf040da13211b9-0",
+      "source": "desktop",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "accept": "*/*",
+      "content-type": "application/json"
+    },
+    "postData": "{\"operationName\":\"SearchAds\",\"variables\":{\"isWorkCategory\":false,\"includeCarsFeatures\":false,\"includeBody\":false,\"includeOwner\":false,\"includeBoost\":false,\"input\":{\"subCategoryId\":7661,\"source\":\"AD_SOURCE_DESKTOP\",\"pagination\":{\"limit\":0,\"skip\":0},\"filters\":[{\"filterId\":16,\"features\":[{\"featureId\":1,\"optionIds\":[776]}]}]}},\"query\":\"query SearchAds($input: Ads_SearchInput!, $isWorkCategory: Boolean = false, $includeCarsFeatures: Boolean = false, $includeBody: Boolean = false, $includeOwner: Boolean = false, $includeBoost: Boolean = false, $locale: Common_Locale) {\\n  searchAds(input: $input) {\\n    ads {\\n      ...AdsSearchFragment\\n      __typename\\n    }\\n    count\\n    reseted\\n    __typename\\n  }\\n}\\n\\nfragment AdsSearchFragment on Advert {\\n  ...AdListFragment\\n  ...WorkCategoryFeatures @include(if: $isWorkCategory)\\n  reseted(\\n    input: {format: \\\"2 Jan. 2006, 15:04\\\", locale: $locale, timezone: \\\"Europe/Chisinau\\\", getDiff: false}\\n  )\\n  __typename\\n}\\n\\nfragment AdListFragment on Advert {\\n  id\\n  title\\n  subCategory {\\n    ...CategoryAdFragment\\n    __typename\\n  }\\n  ...PriceAndImages\\n  ...CarsFeatures @include(if: $includeCarsFeatures)\\n  ...AdvertOwner @include(if: $includeOwner)\\n  transportYear: feature(id: 19) {\\n    ...FeatureValueFragment\\n    __typename\\n  }\\n  realEstate: feature(id: 795) {\\n    ...FeatureValueFragment\\n    __typename\\n  }\\n  body: feature(id: 13) @include(if: $includeBody) {\\n    ...FeatureValueFragment\\n    __typename\\n  }\\n  ...AdvertBooster @include(if: $includeBoost)\\n  label: displayProduct(alias: LABEL) {\\n    ... on DisplayLabel {\\n      enable\\n      ...DisplayLabelFragment\\n      __typename\\n    }\\n    __typename\\n  }\\n  frame: displayProduct(alias: FRAME) {\\n    ... on DisplayFrame {\\n      enable\\n      __typename\\n    }\\n    __typename\\n  }\\n  animation: displayProduct(alias: ANIMATION) {\\n    ... on DisplayAnimation {\\n      enable\\n      __typename\\n    }\\n    __typename\\n  }\\n  animationAndFrame: displayProduct(alias: ANIMATION_AND_FRAME) {\\n    ... on DisplayAnimationAndFrame {\\n      enable\\n      __typename\\n    }\\n    __typename\\n  }\\n  __typename\\n}\\n\\nfragment CategoryAdFragment on Category {\\n  id\\n  title {\\n    ...TranslationFragment\\n    __typename\\n  }\\n  parent {\\n    id\\n    title {\\n      ...TranslationFragment\\n      __typename\\n    }\\n    parent {\\n      id\\n      title {\\n        ...TranslationFragment\\n        __typename\\n      }\\n      __typename\\n    }\\n    __typename\\n  }\\n  __typename\\n}\\n\\nfragment TranslationFragment on I18NTr {\\n  translated\\n  __typename\\n}\\n\\nfragment PriceAndImages on Advert {\\n  price: feature(id: 2) {\\n    ...FeatureValueFragment\\n    __typename\\n  }\\n  pricePerMeter: feature(id: 1385) {\\n    ...FeatureValueFragment\\n    __typename\\n  }\\n  oldPrice: feature(id: 1640) {\\n    ...FeatureValueFragment\\n    __typename\\n  }\\n  images: feature(id: 14) {\\n    ...FeatureValueFragment\\n    __typename\\n  }\\n  __typename\\n}\\n\\nfragment FeatureValueFragment on FeatureValue {\\n  id\\n  type\\n  value\\n  __typename\\n}\\n\\nfragment CarsFeatures on Advert {\\n  carFuel: feature(id: 151) {\\n    ...FeatureValueFragment\\n    __typename\\n  }\\n  carDrive: feature(id: 108) {\\n    ...FeatureValueFragment\\n    __typename\\n  }\\n  carTransmission: feature(id: 101) {\\n    ...FeatureValueFragment\\n    __typename\\n  }\\n  mileage: feature(id: 104) {\\n    ...FeatureValueFragment\\n    __typename\\n  }\\n  engineVolume: feature(id: 103) {\\n    ...FeatureValueFragment\\n    __typename\\n  }\\n  __typename\\n}\\n\\nfragment AdvertOwner on Advert {\\n  owner {\\n    ...AccountFragment\\n    __typename\\n  }\\n  __typename\\n}\\n\\nfragment AccountFragment on Account {\\n  id\\n  login\\n  avatar\\n  createdDate\\n  business {\\n    plan\\n    id\\n    __typename\\n  }\\n  verification {\\n    isVerified\\n    date(input: {timezone: \\\"Europe/Chisinau\\\", getDiff: false})\\n    __typename\\n  }\\n  __typename\\n}\\n\\nfragment AdvertBooster on Advert {\\n  booster: product(alias: BOOSTER_V2) {\\n    enable\\n    __typename\\n  }\\n  __typename\\n}\\n\\nfragment DisplayLabelFragment on DisplayLabel {\\n  title\\n  color {\\n    ...ColorFragment\\n    __typename\\n  }\\n  gradient {\\n    ...GradientFragment\\n    __typename\\n  }\\n  __typename\\n}\\n\\nfragment ColorFragment on Common_Color {\\n  r\\n  g\\n  b\\n  a\\n  __typename\\n}\\n\\nfragment GradientFragment on Gradient {\\n  from {\\n    ...ColorFragment\\n    __typename\\n  }\\n  to {\\n    ...ColorFragment\\n    __typename\\n  }\\n  position\\n  rotation\\n  __typename\\n}\\n\\nfragment WorkCategoryFeatures on Advert {\\n  salary: feature(id: 266) {\\n    ...FeatureValueFragment\\n    __typename\\n  }\\n  workSchedule: feature(id: 260) {\\n    ...FeatureValueFragment\\n    __typename\\n  }\\n  workExperience: feature(id: 263) {\\n    ...FeatureValueFragment\\n    __typename\\n  }\\n  education: feature(id: 261) {\\n    ...FeatureValueFragment\\n    __typename\\n  }\\n  __typename\\n}\"}",
+    "timing": {
+      "startTime": 1773429709735.2249,
+      "domainLookupStart": -1,
+      "domainLookupEnd": -1,
+      "connectStart": -1,
+      "secureConnectionStart": -1,
+      "connectEnd": -1,
+      "requestStart": 12.961,
+      "responseStart": 40.637,
+      "responseEnd": 41.937
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "isNavigationRequest": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "0002",
+  "observedAt": "2026-03-13T19:21:49.403Z",
+  "request": {
+    "url": "https://cdn.growthbook.io/api/features/sdk-dNbrVbIrMlQq7xs",
+    "method": "GET",
+    "resourceType": "fetch",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null,
+    "timing": {
+      "startTime": 1773429709137.153,
+      "domainLookupStart": 1.156,
+      "domainLookupEnd": 31.307,
+      "connectStart": 31.37,
+      "secureConnectionStart": 59.749,
+      "connectEnd": 89.348,
+      "requestStart": 89.496,
+      "responseStart": 114.071,
+      "responseEnd": 121.559
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "isNavigationRequest": false
+  }
+}

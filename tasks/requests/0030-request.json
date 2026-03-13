@@ -1,0 +1,37 @@
+{
+  "id": "0030",
+  "observedAt": "2026-03-13T19:21:51.814Z",
+  "request": {
+    "url": "https://prompts.maze.co/api/widgets",
+    "method": "POST",
+    "resourceType": "fetch",
+    "headers": {
+      "x-maze-correlation-id": "1773429710269-9526.901756979458",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "x-maze-snippet-src": "contextual-widget",
+      "referer": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "x-api-key": "67a1f9a9-e9ed-4547-9c12-70987651e4f4",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "accept": "application/json",
+      "content-type": "application/json"
+    },
+    "postData": "{}",
+    "timing": {
+      "startTime": 1773429711681.097,
+      "domainLookupStart": -1,
+      "domainLookupEnd": -1,
+      "connectStart": -1,
+      "secureConnectionStart": -1,
+      "connectEnd": -1,
+      "requestStart": 0.895,
+      "responseStart": 132.981,
+      "responseEnd": 533.976
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "isNavigationRequest": false
+  }
+}

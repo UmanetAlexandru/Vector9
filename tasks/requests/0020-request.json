@@ -1,0 +1,29 @@
+{
+  "id": "0020",
+  "observedAt": "2026-03-13T19:21:50.527Z",
+  "request": {
+    "url": "https://www.google.md/rmkt/collect/1070228838/?random=1773429709819&cv=11&fst=1773429709819&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be63b1v9112727255za200zd9112727255xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=103116026~103200004~115938465~115938468~116024733~116991816~117484252&u_w=1280&u_h=720&url=https%3A%2F%2F999.md%2Fro%2Flist%2Fcomputers-and-office-equipment%2Fmini-pc%3Fo_16_1%3D776&frm=0&tiba=Mini%20PC%20%C3%AEn%20Moldova%3A%20Cump%C4%83rare%2C%20v%C3%A2nzare%2C%20pre%C8%9Buri%20avantajoase%20%E2%80%93%20999.md&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1886106427.1773429709&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&gcp=5&ipr=y",
+    "method": "GET",
+    "resourceType": "fetch",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "referer": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776"
+    },
+    "postData": null,
+    "timing": {
+      "startTime": 1773429710089.5532,
+      "domainLookupStart": 0.796,
+      "domainLookupEnd": 32.896,
+      "connectStart": 32.965,
+      "secureConnectionStart": 85.228,
+      "connectEnd": 164.258,
+      "requestStart": 164.732,
+      "responseStart": 412.511,
+      "responseEnd": 412.511
+    },
+    "redirectedFrom": "https://www.google.com/rmkt/collect/1070228838/?random=1773429709819&cv=11&fst=1773429709819&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be63b1v9112727255za200zd9112727255xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=103116026~103200004~115938465~115938468~116024733~116991816~117484252&u_w=1280&u_h=720&url=https%3A%2F%2F999.md%2Fro%2Flist%2Fcomputers-and-office-equipment%2Fmini-pc%3Fo_16_1%3D776&frm=0&tiba=Mini%20PC%20%C3%AEn%20Moldova%3A%20Cump%C4%83rare%2C%20v%C3%A2nzare%2C%20pre%C8%9Buri%20avantajoase%20%E2%80%93%20999.md&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1886106427.1773429709&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&gcp=5",
+    "redirectedTo": null,
+    "frameUrl": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "isNavigationRequest": false
+  }
+}

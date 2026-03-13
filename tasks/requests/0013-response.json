@@ -1,0 +1,34 @@
+{
+  "id": "0013",
+  "observedAt": "2026-03-13T19:21:49.916Z",
+  "response": {
+    "url": "https://999.md/graphql",
+    "status": 200,
+    "statusText": "",
+    "headers": {
+      "access-control-allow-credentials": "true",
+      "access-control-allow-headers": "auth, content-type, accesstoken, lang, source",
+      "access-control-allow-methods": "GET, POST, OPTIONS",
+      "access-control-allow-origin": "https://999.md",
+      "cache-control": "no-store, no-cache, must-revalidate, max-age=0",
+      "content-encoding": "br",
+      "content-length": "88",
+      "content-type": "application/graphql-response+json",
+      "date": "Fri, 13 Mar 2026 19:21:49 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx",
+      "vary": "Accept-Encoding",
+      "x-proxy-cache": "MISS"
+    },
+    "fromServiceWorker": false,
+    "ok": true
+  },
+  "failure": null,
+  "capture": {
+    "bodyStored": true,
+    "bodyEncoding": "utf-8",
+    "bodySkippedReason": null,
+    "contentType": "application/graphql-response+json"
+  }
+}

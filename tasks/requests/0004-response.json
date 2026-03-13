@@ -1,0 +1,34 @@
+{
+  "id": "0004",
+  "observedAt": "2026-03-13T19:21:49.409Z",
+  "response": {
+    "url": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "status": 200,
+    "statusText": "",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-encoding": "gzip",
+      "content-type": "text/x-component",
+      "date": "Fri, 13 Mar 2026 19:21:49 GMT",
+      "server": "nginx",
+      "source": "desktop",
+      "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Accept-Encoding",
+      "x-action-revalidated": "[[],0,0]",
+      "x-app-version": "735281efd07e89bd438ba3b02e95d5d50c30bdae",
+      "x-lang": "ro",
+      "x-middleware-rewrite": "/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+      "x-nocache": "1",
+      "x-pathname": "/ro/list/computers-and-office-equipment/mini-pc",
+      "x-powered-by": "Next.js"
+    },
+    "fromServiceWorker": false,
+    "ok": true
+  },
+  "failure": null,
+  "capture": {
+    "bodyStored": true,
+    "bodyEncoding": "utf-8",
+    "bodySkippedReason": null,
+    "contentType": "text/x-component"
+  }
+}

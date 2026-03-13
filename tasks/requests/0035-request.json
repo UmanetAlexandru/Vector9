@@ -1,0 +1,33 @@
+{
+  "id": "0035",
+  "observedAt": "2026-03-13T19:22:02.273Z",
+  "request": {
+    "url": "https://b.clarity.ms/collect",
+    "method": "POST",
+    "resourceType": "xhr",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "accept": "application/x-clarity-gzip",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": "\u001f�\b\u0000\u0000\u0000\u0000\u0000\u0000\n��K��0\u0014�����\u0016�\u0013I���\u0010���\u001bc\u0006��0\"~�V:IK�{Q\u001en�\u0014�(E`�}>��\u001eq����$��V*%Hh�\u0005��\tȻ��6�N;\u0002�c��\n\u0016*���z\u0002\u0007;-z�~���:��U׬�aݺٯ�\u001b��Nsl�&\u001e�[W��~ٻ���_w�w�X\u0018��~�4�T�\f\u0015ey:�\u0004\u0007\u0017\u0019C�$�\\���\u0014�9\u0018�}���BɹJ\u00158$Jrޏ���w�s�z�Z\u0000\u0006\u0001�I$'�CA@(�\u0005H44�L�\u0014\f��9XUU�1�u���U���T�b���>\u0013�1�Įo�a�\u0010�n�<o��ջxn]c\t���\u0019�9���L����\u001b?�\u00030�ck7�޷��E�\u000f�}��\\�_�H�t<<Q�\u0014�;G��;oI(Sd��Y\u0015�d��\u0003�~��\u0002'\u000f��SWѹ6�w_�/�~�l�\teVݷ�5�l\t��M-n��-��[�\u001f\t�\u001e]/����2B��F�x S���[\u001b?�z���%zų�}4��v�XD�)����0uŹl��I�.\u0016B$�\u0001\u0011�<�_P���\u0017Q�f_v����\u0011g�us�X-%��T�B�и�\u001c\u001d���!.pu/�E\u000e\u0001@�{9]d}�S��&\u0011-�\u0005H\u0003�h�E�e�\u0000!8��\u001e8i��'-���؝FH�\n�2,�9r�=�D\u0018���\u0013\u001e\u0002��-\u0005\u0000\u0000",
+    "timing": {
+      "startTime": 1773429722039.9832,
+      "domainLookupStart": -1,
+      "domainLookupEnd": -1,
+      "connectStart": -1,
+      "secureConnectionStart": -1,
+      "connectEnd": -1,
+      "requestStart": 2.086,
+      "responseStart": 232.975,
+      "responseEnd": 233.895
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "isNavigationRequest": false
+  }
+}

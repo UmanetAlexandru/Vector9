@@ -1,0 +1,33 @@
+{
+  "id": "0001",
+  "observedAt": "2026-03-13T19:21:49.133Z",
+  "request": {
+    "url": "https://newsentry.simpals.md/api/13/envelope/?sentry_version=7&sentry_key=8c0da8a1581f038752d958d2e9ae8210&sentry_client=sentry.javascript.nextjs%2F10.23.0",
+    "method": "POST",
+    "resourceType": "fetch",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://999.md/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "content-type": "text/plain;charset=UTF-8",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": "{\"sent_at\":\"2026-03-13T19:21:48.768Z\",\"sdk\":{\"name\":\"sentry.javascript.nextjs\",\"version\":\"10.23.0\"}}\n{\"type\":\"session\"}\n{\"sid\":\"6dd2c79c92dc4d1cbb9efefa430ddfc6\",\"init\":true,\"started\":\"2026-03-13T19:21:48.768Z\",\"timestamp\":\"2026-03-13T19:21:48.768Z\",\"status\":\"ok\",\"errors\":0,\"attrs\":{\"release\":\"735281efd07e89bd438ba3b02e95d5d50c30bdae\",\"environment\":\"production\",\"ip_address\":\"{{auto}}\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36\"}}",
+    "timing": {
+      "startTime": 1773429708772.8691,
+      "domainLookupStart": 0.415,
+      "domainLookupEnd": 14.111,
+      "connectStart": 14.193,
+      "secureConnectionStart": 21.164,
+      "connectEnd": 32.721,
+      "requestStart": 32.874,
+      "responseStart": 40.904,
+      "responseEnd": 41.933
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "isNavigationRequest": false
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "0003",
+  "observedAt": "2026-03-13T19:21:49.407Z",
+  "request": {
+    "url": "https://v2.simpalsid.com/graphql",
+    "method": "POST",
+    "resourceType": "fetch",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "content-type": "application/json",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": "{\"operationName\":\"RandomArticle\",\"query\":\"\\n      query RandomArticle {\\n        randomArticle {\\n          id\\n          title\\n          link\\n          image\\n          rate\\n          project_title\\n        }\\n      }\\n    \"}",
+    "timing": {
+      "startTime": 1773429709265.231,
+      "domainLookupStart": -1,
+      "domainLookupEnd": -1,
+      "connectStart": -1,
+      "secureConnectionStart": -1,
+      "connectEnd": -1,
+      "requestStart": 0.427,
+      "responseStart": 16.146,
+      "responseEnd": 65.56
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "isNavigationRequest": false
+  }
+}

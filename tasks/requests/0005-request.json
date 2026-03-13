@@ -1,0 +1,38 @@
+{
+  "id": "0005",
+  "observedAt": "2026-03-13T19:21:49.455Z",
+  "request": {
+    "url": "https://999.md/graphql",
+    "method": "POST",
+    "resourceType": "fetch",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "lang": "ro",
+      "referer": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "sec-ch-ua-mobile": "?0",
+      "baggage": "sentry-environment=production,sentry-release=735281efd07e89bd438ba3b02e95d5d50c30bdae,sentry-public_key=8c0da8a1581f038752d958d2e9ae8210,sentry-trace_id=4d6c9c98d3b2cbb7f7315ed3519e62ea,sentry-sampled=false,sentry-sample_rand=0.848749101120017,sentry-sample_rate=0.05",
+      "sentry-trace": "4d6c9c98d3b2cbb7f7315ed3519e62ea-b5d6f06e682a6d85-0",
+      "source": "desktop",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",
+      "accept": "*/*",
+      "content-type": "application/json"
+    },
+    "postData": "{\"operationName\":\"GetMainCurrenciesRates\",\"variables\":{},\"query\":\"query GetMainCurrenciesRates {\\n  getMainCurrenciesRates {\\n    ...CurrencyRates\\n    __typename\\n  }\\n}\\n\\nfragment CurrencyRates on Rates_MainCurrenciesRatesResponse {\\n  mainCurrenciesRates {\\n    key\\n    ratios {\\n      key\\n      value\\n      __typename\\n    }\\n    __typename\\n  }\\n  __typename\\n}\"}",
+    "timing": {
+      "startTime": 1773429709270.652,
+      "domainLookupStart": -1,
+      "domainLookupEnd": -1,
+      "connectStart": -1,
+      "secureConnectionStart": -1,
+      "connectEnd": -1,
+      "requestStart": 22.545,
+      "responseStart": 29.872,
+      "responseEnd": 31.417
+    },
+    "redirectedFrom": null,
+    "redirectedTo": null,
+    "frameUrl": "https://999.md/ro/list/computers-and-office-equipment/mini-pc?o_16_1=776",
+    "isNavigationRequest": false
+  }
+}

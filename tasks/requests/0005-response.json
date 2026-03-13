@@ -1,0 +1,28 @@
+{
+  "id": "0005",
+  "observedAt": "2026-03-13T19:21:49.455Z",
+  "response": {
+    "url": "https://999.md/graphql",
+    "status": 200,
+    "statusText": "",
+    "headers": {
+      "cache-control": "public, max-age=300",
+      "content-encoding": "br",
+      "content-length": "216",
+      "content-type": "application/graphql-response+json",
+      "date": "Fri, 13 Mar 2026 19:21:49 GMT",
+      "server": "nginx",
+      "vary": "Accept-Encoding",
+      "x-proxy-cache": "HIT"
+    },
+    "fromServiceWorker": false,
+    "ok": true
+  },
+  "failure": null,
+  "capture": {
+    "bodyStored": true,
+    "bodyEncoding": "utf-8",
+    "bodySkippedReason": null,
+    "contentType": "application/graphql-response+json"
+  }
+}
