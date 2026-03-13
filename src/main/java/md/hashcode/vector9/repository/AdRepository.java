@@ -1,0 +1,83 @@
+package md.hashcode.vector9.repository;
+
+import java.time.LocalDateTime;
+import java.util.Optional;
+import java.util.UUID;
+
+import md.hashcode.vector9.jooq.tables.records.AdsRecord;
+import md.hashcode.vector9.model.AdUpsertCommand;
+import org.jooq.DSLContext;
+import org.springframework.stereotype.Repository;
+
+import static md.hashcode.vector9.jooq.Tables.ADS;
+
+@Repository
+public class AdRepository {
+
+    private final DSLContext dslContext;
+
+    public AdRepository(DSLContext dslContext) {
+        this.dslContext = dslContext;
+    }
+
+    public Optional<AdsRecord> findById(long id) {
+        return dslContext.selectFrom(ADS)
+                .where(ADS.ID.eq(id))
+                .fetchOptionalInto(AdsRecord.class);
+    }
+
+    public AdsRecord upsert(AdUpsertCommand command, UUID ownerId, LocalDateTime now) {
+        LocalDateTime lastSeenAt = command.lastSeenAt() != null ? command.lastSeenAt() : now;
+        String status = command.status() != null ? command.status() : "active";
+
+        return dslContext.insertInto(ADS)
+                .set(ADS.ID, command.id())
+                .set(ADS.TITLE, command.title())
+                .set(ADS.SUBCATEGORY_ID, command.subcategoryId())
+                .set(ADS.PRICE_VALUE, command.priceValue())
+                .set(ADS.PRICE_UNIT, command.priceUnit())
+                .set(ADS.PRICE_MEASUREMENT, command.priceMeasurement())
+                .set(ADS.PRICE_MODE, command.priceMode())
+                .set(ADS.PRICE_PER_METER, command.pricePerMeter())
+                .set(ADS.OLD_PRICE_VALUE, command.oldPriceValue())
+                .set(ADS.BODY_RO, command.bodyRo())
+                .set(ADS.BODY_RU, command.bodyRu())
+                .set(ADS.AD_STATE, command.adState())
+                .set(ADS.OFFER_TYPE_ID, command.offerTypeId())
+                .set(ADS.OFFER_TYPE_VALUE, command.offerTypeValue())
+                .set(ADS.OFFER_TYPE_TEXT, command.offerTypeText())
+                .set(ADS.OWNER_ID, ownerId)
+                .set(ADS.TRANSPORT_YEAR, command.transportYear())
+                .set(ADS.REAL_ESTATE_TYPE, command.realEstateType())
+                .set(ADS.STATUS, status)
+                .set(ADS.LAST_SEEN_AT, lastSeenAt)
+                .set(ADS.LAST_UPDATED_AT, now)
+                .set(ADS.FIRST_SEEN_AT, now)
+                .set(ADS.UPDATED_AT, now)
+                .onConflict(ADS.ID)
+                .doUpdate()
+                .set(ADS.TITLE, command.title())
+                .set(ADS.SUBCATEGORY_ID, command.subcategoryId())
+                .set(ADS.PRICE_VALUE, command.priceValue())
+                .set(ADS.PRICE_UNIT, command.priceUnit())
+                .set(ADS.PRICE_MEASUREMENT, command.priceMeasurement())
+                .set(ADS.PRICE_MODE, command.priceMode())
+                .set(ADS.PRICE_PER_METER, command.pricePerMeter())
+                .set(ADS.OLD_PRICE_VALUE, command.oldPriceValue())
+                .set(ADS.BODY_RO, command.bodyRo())
+                .set(ADS.BODY_RU, command.bodyRu())
+                .set(ADS.AD_STATE, command.adState())
+                .set(ADS.OFFER_TYPE_ID, command.offerTypeId())
+                .set(ADS.OFFER_TYPE_VALUE, command.offerTypeValue())
+                .set(ADS.OFFER_TYPE_TEXT, command.offerTypeText())
+                .set(ADS.OWNER_ID, ownerId)
+                .set(ADS.TRANSPORT_YEAR, command.transportYear())
+                .set(ADS.REAL_ESTATE_TYPE, command.realEstateType())
+                .set(ADS.STATUS, status)
+                .set(ADS.LAST_SEEN_AT, lastSeenAt)
+                .set(ADS.LAST_UPDATED_AT, now)
+                .set(ADS.UPDATED_AT, now)
+                .returning()
+                .fetchOne();
+    }
+}
