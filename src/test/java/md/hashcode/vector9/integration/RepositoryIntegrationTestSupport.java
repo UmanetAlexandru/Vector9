@@ -10,6 +10,7 @@ import md.hashcode.vector9.repository.CrawlCheckpointRepository;
 import md.hashcode.vector9.repository.OwnerRepository;
 import md.hashcode.vector9.repository.PriceHistoryRepository;
 import md.hashcode.vector9.repository.SubcategoryRepository;
+import md.hashcode.vector9.repository.ViewHistoryRepository;
 import md.hashcode.vector9.service.AdPersistenceService;
 import org.flywaydb.core.Flyway;
 import org.jooq.DSLContext;
@@ -38,6 +39,7 @@ abstract class RepositoryIntegrationTestSupport {
     protected AdImageRepository adImageRepository;
     protected PriceHistoryRepository priceHistoryRepository;
     protected CrawlCheckpointRepository crawlCheckpointRepository;
+    protected ViewHistoryRepository viewHistoryRepository;
     protected AdPersistenceService adPersistenceService;
 
     @BeforeEach
@@ -68,6 +70,7 @@ abstract class RepositoryIntegrationTestSupport {
         adImageRepository = new AdImageRepository(dslContext);
         priceHistoryRepository = new PriceHistoryRepository(dslContext);
         crawlCheckpointRepository = new CrawlCheckpointRepository(dslContext);
+        viewHistoryRepository = new ViewHistoryRepository(dslContext);
         adPersistenceService = new AdPersistenceService(
                 ownerRepository,
                 adRepository,

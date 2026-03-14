@@ -1,6 +1,8 @@
 package md.hashcode.vector9.repository;
 
 import java.time.LocalDateTime;
+import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -24,6 +26,54 @@ public class AdRepository {
         return dslContext.selectFrom(ADS)
                 .where(ADS.ID.eq(id))
                 .fetchOptionalInto(AdsRecord.class);
+    }
+
+    public List<AdsRecord> findActiveAdsLastSeenBefore(LocalDateTime cutoff) {
+        return dslContext.selectFrom(ADS)
+                .where(ADS.STATUS.eq("active"))
+                .and(ADS.LAST_SEEN_AT.isNotNull())
+                .and(ADS.LAST_SEEN_AT.lt(cutoff))
+                .orderBy(ADS.ID.asc())
+                .fetchInto(AdsRecord.class);
+    }
+
+    public List<AdsRecord> findActiveAdsForViewTracking() {
+        return dslContext.selectFrom(ADS)
+                .where(ADS.STATUS.eq("active"))
+                .orderBy(ADS.ID.asc())
+                .fetchInto(AdsRecord.class);
+    }
+
+    public int markDeleted(Collection<Long> adIds, LocalDateTime now) {
+        if (adIds == null || adIds.isEmpty()) {
+            return 0;
+        }
+
+        return dslContext.update(ADS)
+                .set(ADS.STATUS, "deleted")
+                .set(ADS.UPDATED_AT, now)
+                .where(ADS.ID.in(adIds))
+                .and(ADS.STATUS.eq("active"))
+                .execute();
+    }
+
+    public int updateViewCounters(long adId,
+                                  Integer viewsToday,
+                                  Integer viewsTotal,
+                                  Integer viewsSinceRepublish,
+                                  LocalDateTime fetchedAt) {
+        var update = dslContext.update(ADS)
+                .set(ADS.VIEWS_TOTAL, viewsTotal)
+                .set(ADS.VIEWS_SINCE_REPUBLISH, viewsSinceRepublish)
+                .set(ADS.VIEWS_LAST_FETCHED_AT, fetchedAt)
+                .set(ADS.UPDATED_AT, fetchedAt);
+
+        if (viewsToday != null) {
+            update.set(ADS.VIEWS_TODAY, viewsToday);
+        }
+
+        return update.where(ADS.ID.eq(adId))
+                .execute();
     }
 
     public AdsRecord upsert(AdUpsertCommand command, UUID ownerId, LocalDateTime now) {
