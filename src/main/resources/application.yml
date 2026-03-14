@@ -60,6 +60,11 @@ vector9:
     request-delay-ms: 1000
     jitter-ms: 200
     page-size: 50
+    unchanged-stop-threshold: 5
+    locale: ro_RO
+    language: ro
+    source-header: desktop
+    input-source: AD_SOURCE_DESKTOP
 
   enrichment:
     enabled: false

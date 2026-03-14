@@ -60,8 +60,9 @@ public class AdPersistenceService {
             ownerRepository.upsert(command.owner(), now);
             ownerId = command.owner().id();
         }
+        UUID resolvedOwnerId = ownerId;
 
-        adRepository.upsert(ad, ownerId, now);
+        adRepository.upsert(ad, resolvedOwnerId, now);
 
         boolean priceChanged = existing
                 .map(current -> hasPriceChanged(current, ad))
@@ -78,13 +79,38 @@ public class AdPersistenceService {
 
         List<AdImageInput> images = command.images() != null ? command.images() : List.of();
         int insertedImages = adImageRepository.insertMissing(ad.id(), images);
+        boolean materiallyChanged = existing
+                .map(current -> hasMaterialChanges(current, ad, resolvedOwnerId, insertedImages))
+                .orElse(true);
 
-        return new ProcessedAdResult(existing.isEmpty(), priceChanged, insertedImages);
+        return new ProcessedAdResult(existing.isEmpty(), materiallyChanged, priceChanged, insertedImages);
     }
 
     private boolean hasPriceChanged(AdsRecord current, AdUpsertCommand updated) {
         return !samePrice(current.getPriceValue(), updated.priceValue())
                 || !Objects.equals(current.getPriceUnit(), updated.priceUnit());
+    }
+
+    private boolean hasMaterialChanges(AdsRecord current, AdUpsertCommand updated, UUID ownerId, int insertedImages) {
+        return !Objects.equals(current.getTitle(), updated.title())
+                || !Objects.equals(current.getSubcategoryId(), updated.subcategoryId())
+                || !samePrice(current.getPriceValue(), updated.priceValue())
+                || !Objects.equals(current.getPriceUnit(), updated.priceUnit())
+                || !Objects.equals(current.getPriceMeasurement(), updated.priceMeasurement())
+                || !Objects.equals(current.getPriceMode(), updated.priceMode())
+                || !samePrice(current.getPricePerMeter(), updated.pricePerMeter())
+                || !samePrice(current.getOldPriceValue(), updated.oldPriceValue())
+                || !Objects.equals(current.getBodyRo(), updated.bodyRo())
+                || !Objects.equals(current.getBodyRu(), updated.bodyRu())
+                || !Objects.equals(current.getAdState(), updated.adState())
+                || !Objects.equals(current.getOfferTypeId(), updated.offerTypeId())
+                || !Objects.equals(current.getOfferTypeValue(), updated.offerTypeValue())
+                || !Objects.equals(current.getOfferTypeText(), updated.offerTypeText())
+                || !Objects.equals(current.getOwnerId(), ownerId)
+                || !Objects.equals(current.getTransportYear(), updated.transportYear())
+                || !Objects.equals(current.getRealEstateType(), updated.realEstateType())
+                || !Objects.equals(current.getStatus(), updated.status())
+                || insertedImages > 0;
     }
 
     private boolean samePrice(BigDecimal left, BigDecimal right) {
