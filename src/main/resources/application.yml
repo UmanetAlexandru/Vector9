@@ -72,3 +72,10 @@ vector9:
     batch-size: 20
     delay-ms: 3000
     refresh-days: 30
+
+  tracking:
+    deletion-threshold-days: 7
+    view-batch-size: 50
+    write-view-history: true
+    language: ro
+    source-header: desktop
