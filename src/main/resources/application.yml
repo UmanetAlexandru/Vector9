@@ -79,3 +79,8 @@ vector9:
     write-view-history: true
     language: ro
     source-header: desktop
+
+  observability:
+    incremental-crawler-freshness-minutes: 30
+    deletion-detection-freshness-minutes: 180
+    view-tracking-freshness-minutes: 180

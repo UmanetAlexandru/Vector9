@@ -28,6 +28,9 @@ class ApplicationIntegrationTest {
 
         assertThat(response.statusCode()).isEqualTo(200);
         assertThat(response.body()).contains("\"status\":\"UP\"");
+        assertThat(response.body()).contains("incrementalCrawlerFreshness");
+        assertThat(response.body()).contains("deletionDetectionFreshness");
+        assertThat(response.body()).contains("viewTrackingFreshness");
     }
 
     @Test

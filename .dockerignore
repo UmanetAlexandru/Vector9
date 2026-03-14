@@ -1,0 +1,8 @@
+.git
+.github
+.m2
+target
+logs
+docker/postgres
+999Form.txt
+999Post.txt

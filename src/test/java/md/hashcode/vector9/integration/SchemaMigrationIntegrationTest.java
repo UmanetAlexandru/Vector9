@@ -64,7 +64,8 @@ class SchemaMigrationIntegrationTest {
                 "crawl_checkpoints",
                 "car_features",
                 "ad_attributes",
-                "view_history"
+                "view_history",
+                "job_execution_state"
         );
     }
 

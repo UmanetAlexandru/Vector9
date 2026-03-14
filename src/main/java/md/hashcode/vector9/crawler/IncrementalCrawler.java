@@ -14,6 +14,8 @@ import md.hashcode.vector9.model.graphql.SearchAdsData;
 import md.hashcode.vector9.model.graphql.SearchAdsResult;
 import md.hashcode.vector9.repository.SubcategoryRepository;
 import md.hashcode.vector9.service.AdPersistenceService;
+import md.hashcode.vector9.service.JobExecutionTracker;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -25,6 +27,7 @@ public class IncrementalCrawler {
     private final AdPersistenceService adPersistenceService;
     private final SearchAdsRequestFactory requestFactory;
     private final CrawlerProperties crawlerProperties;
+    private JobExecutionTracker jobExecutionTracker;
 
     public IncrementalCrawler(
             SubcategoryRepository subcategoryRepository,
@@ -43,11 +46,25 @@ public class IncrementalCrawler {
     }
 
     public CrawlBatchResult crawlEnabledSubcategories() {
+        long startedAt = System.nanoTime();
         List<SubcategoryCrawlResult> results = new ArrayList<>();
         for (SubcategoriesRecord subcategory : subcategoryRepository.findEnabled()) {
             results.add(crawlSubcategory(subcategory));
         }
-        return CrawlBatchResult.fromResults(results);
+        CrawlBatchResult batchResult = CrawlBatchResult.fromResults(results);
+        if (jobExecutionTracker != null) {
+            jobExecutionTracker.recordCrawlerBatch(
+                    JobExecutionTracker.JOB_INCREMENTAL_CRAWLER,
+                    batchResult,
+                    elapsedMillis(startedAt)
+            );
+        }
+        return batchResult;
+    }
+
+    @Autowired(required = false)
+    public void setJobExecutionTracker(JobExecutionTracker jobExecutionTracker) {
+        this.jobExecutionTracker = jobExecutionTracker;
     }
 
     public SubcategoryCrawlResult crawlSubcategory(SubcategoriesRecord subcategory) {
@@ -156,5 +173,9 @@ public class IncrementalCrawler {
             throw new IllegalStateException("Missing SearchAds payload for subcategory " + subcategoryId);
         }
         return data.searchAds();
+    }
+
+    private long elapsedMillis(long startedAt) {
+        return (System.nanoTime() - startedAt) / 1_000_000L;
     }
 }
