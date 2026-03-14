@@ -51,6 +51,13 @@ feat: complete task 01 project bootstrap
 - Before commit, run the relevant project-level validation for the completed task.
 - In the final response, state exactly which commands were run and whether they passed.
 
+## Maven Local Repository
+
+- Prefer using the global Maven local repository when running Maven commands.
+- If sandbox restrictions block access to the global Maven local repository, rerun the Maven command with escalated permissions before choosing another repository path.
+- Only fall back to a workspace-local Maven repository such as `-Dmaven.repo.local=.m2/repository` if escalated permissions are unavailable or denied.
+- In the final response, state which Maven local repository path was used for any Maven command that was run.
+
 ## Current Environment Note
 
 As of 2026-03-11, `gh` is installed in this environment but not authenticated. Before push/PR steps can succeed through the GitHub CLI, run:

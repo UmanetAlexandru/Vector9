@@ -33,6 +33,7 @@ class AdPersistenceServiceIntegrationTest extends RepositoryIntegrationTestSuppo
         ));
 
         assertThat(result.created()).isTrue();
+        assertThat(result.materiallyChanged()).isTrue();
         assertThat(result.priceChanged()).isFalse();
         assertThat(result.insertedImages()).isEqualTo(2);
         assertThat(dslContext.fetchCount(OWNERS)).isEqualTo(1);
@@ -56,6 +57,7 @@ class AdPersistenceServiceIntegrationTest extends RepositoryIntegrationTestSuppo
         var secondResult = adPersistenceService.persist(command);
 
         assertThat(secondResult.created()).isFalse();
+        assertThat(secondResult.materiallyChanged()).isFalse();
         assertThat(secondResult.priceChanged()).isFalse();
         assertThat(secondResult.insertedImages()).isZero();
         assertThat(dslContext.fetchCount(ADS)).isEqualTo(1);
@@ -94,8 +96,10 @@ class AdPersistenceServiceIntegrationTest extends RepositoryIntegrationTestSuppo
                 )
         ));
 
+        assertThat(changedResult.materiallyChanged()).isTrue();
         assertThat(changedResult.priceChanged()).isTrue();
         assertThat(changedResult.insertedImages()).isEqualTo(1);
+        assertThat(repeatedChangedResult.materiallyChanged()).isFalse();
         assertThat(repeatedChangedResult.priceChanged()).isFalse();
         assertThat(repeatedChangedResult.insertedImages()).isZero();
         assertThat(dslContext.fetchCount(PRICE_HISTORY)).isEqualTo(1);
