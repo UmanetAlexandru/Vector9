@@ -22,6 +22,7 @@ public class ViewTrackingService {
     private final GraphqlClient graphqlClient;
     private final TrackingProperties trackingProperties;
     private final Clock clock;
+    private JobExecutionTracker jobExecutionTracker;
 
     @Autowired
     public ViewTrackingService(AdRepository adRepository,
@@ -44,6 +45,7 @@ public class ViewTrackingService {
     }
 
     public ViewTrackingJobResult refreshActiveAdViews() {
+        long startedAt = System.nanoTime();
         var activeAds = adRepository.findActiveAdsForViewTracking();
         int batchSize = Math.max(1, trackingProperties.getViewBatchSize());
         List<String> failures = new ArrayList<>();
@@ -101,7 +103,7 @@ public class ViewTrackingService {
             }
         }
 
-        return new ViewTrackingJobResult(
+        ViewTrackingJobResult result = new ViewTrackingJobResult(
                 activeAds.size(),
                 adsUpdated,
                 historyRowsInserted,
@@ -110,5 +112,18 @@ public class ViewTrackingService {
                 batchesFailed,
                 List.copyOf(failures)
         );
+        if (jobExecutionTracker != null) {
+            jobExecutionTracker.recordViewTrackingResult(result, elapsedMillis(startedAt));
+        }
+        return result;
+    }
+
+    @Autowired(required = false)
+    public void setJobExecutionTracker(JobExecutionTracker jobExecutionTracker) {
+        this.jobExecutionTracker = jobExecutionTracker;
+    }
+
+    private long elapsedMillis(long startedAt) {
+        return (System.nanoTime() - startedAt) / 1_000_000L;
     }
 }

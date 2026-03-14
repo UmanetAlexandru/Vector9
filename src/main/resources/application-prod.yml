@@ -1,10 +1,21 @@
 spring:
   datasource:
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT:5432}/${DB_NAME}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
     hikari:
       maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
 
   flyway:
     clean-disabled: true
+
+server:
+  shutdown: graceful
 
 logging:
   level:
@@ -20,3 +31,8 @@ vector9:
 
   enrichment:
     enabled: true
+
+  observability:
+    incremental-crawler-freshness-minutes: 30
+    deletion-detection-freshness-minutes: 180
+    view-tracking-freshness-minutes: 180

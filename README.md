@@ -21,3 +21,8 @@ mvn spring-boot:run -Dspring-boot.run.profiles=dev
 - `dev` for local development
 - `test` for automated tests with Testcontainers
 - `prod` for production-oriented overrides
+
+## Operations
+
+- runtime and deployment workflow: [`docs/OPERATIONS.md`](docs/OPERATIONS.md)
+- production image build: `docker build -t vector9:latest .`
