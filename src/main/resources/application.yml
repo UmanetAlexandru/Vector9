@@ -72,6 +72,12 @@ vector9:
     batch-size: 20
     delay-ms: 3000
     refresh-days: 30
+    retry-limit: 3
+    language: ro
+    base-url: https://999.md
+    headless: true
+    page-timeout-ms: 30000
+    navigation-timeout-ms: 30000
 
   tracking:
     deletion-threshold-days: 7

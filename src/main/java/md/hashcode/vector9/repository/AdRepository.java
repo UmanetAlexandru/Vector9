@@ -9,12 +9,19 @@ import java.util.UUID;
 import md.hashcode.vector9.jooq.tables.records.AdsRecord;
 import md.hashcode.vector9.model.AdUpsertCommand;
 import org.jooq.DSLContext;
+import org.jooq.impl.DSL;
 import org.springframework.stereotype.Repository;
 
 import static md.hashcode.vector9.jooq.Tables.ADS;
 
 @Repository
 public class AdRepository {
+
+    public static final String ENRICHMENT_STATUS_PENDING = "pending";
+    public static final String ENRICHMENT_STATUS_IN_PROGRESS = "in_progress";
+    public static final String ENRICHMENT_STATUS_COMPLETED = "completed";
+    public static final String ENRICHMENT_STATUS_FAILED_RETRYABLE = "failed_retryable";
+    public static final String ENRICHMENT_STATUS_FAILED_PERMANENT = "failed_permanent";
 
     private final DSLContext dslContext;
 
@@ -44,6 +51,29 @@ public class AdRepository {
                 .fetchInto(AdsRecord.class);
     }
 
+    public List<AdsRecord> findCandidatesForEnrichment(LocalDateTime refreshCutoff, int retryLimit, int limit) {
+        return dslContext.selectFrom(ADS)
+                .where(ADS.STATUS.eq("active"))
+                .and(ADS.ENRICHMENT_STATUS.isNull().or(ADS.ENRICHMENT_STATUS.ne(ENRICHMENT_STATUS_IN_PROGRESS)))
+                .and(
+                        ADS.DETAILS_ENRICHED.eq(false)
+                                .or(ADS.ENRICHMENT_STATUS.eq(ENRICHMENT_STATUS_FAILED_RETRYABLE)
+                                        .and(DSL.coalesce(ADS.ENRICHMENT_ATTEMPTS, 0).lt(retryLimit)))
+                                .or(ADS.DETAILS_ENRICHED.eq(true)
+                                        .and(ADS.DETAILS_LAST_ENRICHED_AT.isNotNull())
+                                        .and(ADS.DETAILS_LAST_ENRICHED_AT.lt(refreshCutoff)))
+                )
+                .orderBy(
+                        DSL.when(ADS.DETAILS_ENRICHED.eq(false), 0)
+                                .when(ADS.ENRICHMENT_STATUS.eq(ENRICHMENT_STATUS_FAILED_RETRYABLE), 1)
+                                .otherwise(2),
+                        ADS.DETAILS_LAST_ENRICHED_AT.asc().nullsFirst(),
+                        ADS.ID.asc()
+                )
+                .limit(limit)
+                .fetchInto(AdsRecord.class);
+    }
+
     public int markDeleted(Collection<Long> adIds, LocalDateTime now) {
         if (adIds == null || adIds.isEmpty()) {
             return 0;
@@ -54,6 +84,37 @@ public class AdRepository {
                 .set(ADS.UPDATED_AT, now)
                 .where(ADS.ID.in(adIds))
                 .and(ADS.STATUS.eq("active"))
+                .execute();
+    }
+
+    public int markEnrichmentStarted(long adId, LocalDateTime attemptAt) {
+        return dslContext.update(ADS)
+                .set(ADS.ENRICHMENT_STATUS, ENRICHMENT_STATUS_IN_PROGRESS)
+                .set(ADS.ENRICHMENT_ATTEMPTS, DSL.coalesce(ADS.ENRICHMENT_ATTEMPTS, 0).plus(1))
+                .set(ADS.ENRICHMENT_LAST_ATTEMPT_AT, attemptAt)
+                .set(ADS.UPDATED_AT, attemptAt)
+                .where(ADS.ID.eq(adId))
+                .and(ADS.ENRICHMENT_STATUS.isNull().or(ADS.ENRICHMENT_STATUS.ne(ENRICHMENT_STATUS_IN_PROGRESS)))
+                .execute();
+    }
+
+    public int markEnrichmentSucceeded(long adId, LocalDateTime enrichedAt) {
+        return dslContext.update(ADS)
+                .set(ADS.DETAILS_ENRICHED, true)
+                .set(ADS.ENRICHMENT_STATUS, ENRICHMENT_STATUS_COMPLETED)
+                .set(ADS.DETAILS_LAST_ENRICHED_AT, enrichedAt)
+                .set(ADS.UPDATED_AT, enrichedAt)
+                .where(ADS.ID.eq(adId))
+                .execute();
+    }
+
+    public int markEnrichmentFailed(long adId, LocalDateTime attemptedAt, boolean retryable) {
+        return dslContext.update(ADS)
+                .set(ADS.DETAILS_ENRICHED, false)
+                .set(ADS.ENRICHMENT_STATUS, retryable ? ENRICHMENT_STATUS_FAILED_RETRYABLE : ENRICHMENT_STATUS_FAILED_PERMANENT)
+                .set(ADS.ENRICHMENT_LAST_ATTEMPT_AT, attemptedAt)
+                .set(ADS.UPDATED_AT, attemptedAt)
+                .where(ADS.ID.eq(adId))
                 .execute();
     }
 

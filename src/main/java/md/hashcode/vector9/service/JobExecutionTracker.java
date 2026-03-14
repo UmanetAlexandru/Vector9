@@ -15,6 +15,7 @@ public class JobExecutionTracker {
     public static final String JOB_INITIAL_DISCOVERY = "initial-discovery-crawler";
     public static final String JOB_DELETION_DETECTION = "deletion-detection";
     public static final String JOB_VIEW_TRACKING = "view-tracking";
+    public static final String JOB_DETAIL_ENRICHMENT = "detail-enrichment";
 
     private final JobExecutionStateRepository repository;
     private final OperationalMetricsRecorder metricsRecorder;
@@ -60,6 +61,15 @@ public class JobExecutionTracker {
             recordSuccess(JOB_VIEW_TRACKING, durationMs);
         } else {
             recordFailure(JOB_VIEW_TRACKING, durationMs, String.join("; ", result.failureMessages()));
+        }
+    }
+
+    public void recordEnrichmentResult(EnrichmentJobResult result, long durationMs) {
+        metricsRecorder.recordDetailEnrichment(result.adsEnriched(), result.adsFailed());
+        if (result.adsFailed() == 0) {
+            recordSuccess(JOB_DETAIL_ENRICHMENT, durationMs);
+        } else {
+            recordFailure(JOB_DETAIL_ENRICHMENT, durationMs, String.join("; ", result.failureMessages()));
         }
     }
 
