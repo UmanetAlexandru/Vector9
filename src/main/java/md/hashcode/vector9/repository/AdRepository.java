@@ -74,6 +74,20 @@ public class AdRepository {
                 .fetchInto(AdsRecord.class);
     }
 
+    public long countByStatus(String status) {
+        return dslContext.fetchCount(
+                dslContext.selectFrom(ADS)
+                        .where(ADS.STATUS.eq(status))
+        );
+    }
+
+    public long countEnrichedAds() {
+        return dslContext.fetchCount(
+                dslContext.selectFrom(ADS)
+                        .where(ADS.DETAILS_ENRICHED.eq(true))
+        );
+    }
+
     public int markDeleted(Collection<Long> adIds, LocalDateTime now) {
         if (adIds == null || adIds.isEmpty()) {
             return 0;

@@ -16,6 +16,8 @@ public class JobExecutionTracker {
     public static final String JOB_DELETION_DETECTION = "deletion-detection";
     public static final String JOB_VIEW_TRACKING = "view-tracking";
     public static final String JOB_DETAIL_ENRICHMENT = "detail-enrichment";
+    public static final String JOB_DOWNSTREAM_NOTIFICATIONS = "downstream-notifications";
+    public static final String JOB_DAILY_SUMMARY = "daily-summary";
 
     private final JobExecutionStateRepository repository;
     private final OperationalMetricsRecorder metricsRecorder;
