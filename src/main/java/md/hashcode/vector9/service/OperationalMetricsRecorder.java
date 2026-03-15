@@ -64,4 +64,16 @@ public class OperationalMetricsRecorder {
             meterRegistry.counter("vector9.enrichment.failed_ads").increment(adsFailed);
         }
     }
+
+    public void recordDownstreamEventCreated(String eventType) {
+        meterRegistry.counter("vector9.downstream.events.created", "event_type", eventType).increment();
+    }
+
+    public void recordDownstreamDelivery(String eventType, boolean success) {
+        meterRegistry.counter(
+                "vector9.downstream.deliveries",
+                "event_type", eventType,
+                "status", success ? "success" : "failure"
+        ).increment();
+    }
 }

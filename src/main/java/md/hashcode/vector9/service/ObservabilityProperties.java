@@ -10,6 +10,7 @@ public class ObservabilityProperties {
     private long incrementalCrawlerFreshnessMinutes = 30;
     private long deletionDetectionFreshnessMinutes = 180;
     private long viewTrackingFreshnessMinutes = 180;
+    private long detailEnrichmentFreshnessMinutes = 1440;
 
     public long getIncrementalCrawlerFreshnessMinutes() {
         return incrementalCrawlerFreshnessMinutes;
@@ -33,5 +34,13 @@ public class ObservabilityProperties {
 
     public void setViewTrackingFreshnessMinutes(long viewTrackingFreshnessMinutes) {
         this.viewTrackingFreshnessMinutes = viewTrackingFreshnessMinutes;
+    }
+
+    public long getDetailEnrichmentFreshnessMinutes() {
+        return detailEnrichmentFreshnessMinutes;
+    }
+
+    public void setDetailEnrichmentFreshnessMinutes(long detailEnrichmentFreshnessMinutes) {
+        this.detailEnrichmentFreshnessMinutes = detailEnrichmentFreshnessMinutes;
     }
 }

@@ -90,3 +90,15 @@ vector9:
     incremental-crawler-freshness-minutes: 30
     deletion-detection-freshness-minutes: 180
     view-tracking-freshness-minutes: 180
+    detail-enrichment-freshness-minutes: 1440
+
+  downstream:
+    enabled: false
+    environment-name: ${VECTOR9_ENVIRONMENT_NAME:DEV}
+    batch-size: 20
+    retry-limit: 3
+    telegram-base-url: https://api.telegram.org
+    telegram-bot-token: ${VECTOR9_DOWNSTREAM_TELEGRAM_BOT_TOKEN:}
+    telegram-chat-id: ${VECTOR9_DOWNSTREAM_TELEGRAM_CHAT_ID:}
+    daily-summary-enabled: true
+    daily-summary-cron: "0 0 8 * * *"
