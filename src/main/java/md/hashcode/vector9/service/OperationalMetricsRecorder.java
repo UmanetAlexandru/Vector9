@@ -55,4 +55,13 @@ public class OperationalMetricsRecorder {
             meterRegistry.counter("vector9.views.history_rows").increment(historyRowsInserted);
         }
     }
+
+    public void recordDetailEnrichment(int adsEnriched, int adsFailed) {
+        if (adsEnriched > 0) {
+            meterRegistry.counter("vector9.enrichment.enriched_ads").increment(adsEnriched);
+        }
+        if (adsFailed > 0) {
+            meterRegistry.counter("vector9.enrichment.failed_ads").increment(adsFailed);
+        }
+    }
 }
